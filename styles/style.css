@@ -115,7 +115,6 @@ header.sticky a {
     padding: 50px;
     width: auto;
     background: transparent;
-    border: 8px solid white;
     border-radius: 20px;
     backdrop-filter: blur(20px);
 }
