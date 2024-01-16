@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #52796f;
+    /*background: #52796f;*/
     color: #fefae0 ;
 }
 
@@ -18,7 +18,7 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #52796f;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,8 +27,8 @@ header {
 }
 
 header.sticky {
-    padding: 10px 200px;
-    background: transparent;
+    padding: 10px 10%;
+    background: #52796f;
     box-shadow: 6px 6px 25px rgba(209, 209, 209, 0.5);
 }
 
@@ -37,10 +37,15 @@ header.sticky a {
 }
 
 .logo {
-    font-size: 25px;
-    color: #fefae0;
-    text-decoration: none;
-    font-weight: 600;
+    width: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .navigation a {
@@ -54,6 +59,10 @@ header.sticky a {
 
 .navigation a.active {
     color: #ffb703;
+}
+
+.navigation a.to-up {
+    width: 40px;
 }
 
 .navigation a::after {
@@ -84,6 +93,10 @@ header.sticky a {
     transition: transform .5s;
 }
 
+.navigation a.to-up::after {
+    background: transparent;
+}
+
 .navigation a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
@@ -110,8 +123,10 @@ header.sticky a {
 }
 
 .first-section {
+    background: #52796f;
     height: 100vh;
     display: flex;
+
     align-items: center;
     padding: 0 10%;
 }
@@ -135,6 +150,7 @@ header.sticky a {
 
 .home-content p {
     font-size: 16px;
+    margin: 20px 0 40px;
 }
 
 .home-content .btn-box {
@@ -142,7 +158,6 @@ header.sticky a {
     justify-content: space-between;
     width: 345px;
     height: 50px;
-    background: transparent;
 }
 
 .btn-box a {
@@ -200,7 +215,7 @@ header.sticky a {
 
 .link {
     position: absolute;
-    bottom: 40px;
+    bottom: 100px;
     width: 170px;
     display: flex;
     justify-content: space-between;
@@ -242,4 +257,14 @@ header.sticky a {
 
 .link a:hover::before {
     width: 100%;
-} 
+}
+
+.portrait {
+    max-width: 50%;
+    top: 200px;
+}
+
+.portrait img {
+    width : 80%;
+    margin-left: 40%;
+}
