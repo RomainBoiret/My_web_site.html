@@ -334,6 +334,68 @@ section {
     background: var(--second-bg-color);
 }
 
+.skills {
+    min-height: 60vh;
+}
+
+.skills-body {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.skills-container .card {
+    position: relative;
+    text-align: center;
+    width: 320px;
+    height: 400px;
+    background: rgba(45, 45, 45, 1);
+    border-radius: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    overflow: hidden;
+}
+
+.card .skill-img-1 {
+    background: url('/images/web-skills.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 200px;
+}
+
+.card .skill-img-2 {
+    background: url('/images/code-skills.gif') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 200px;
+}
+
+.card .skill-img-3 {
+    background: url('/images/office-skills.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 200px;
+}
+
+.skill-description p {
+    margin-top: 10px;
+    width: auto;
+    height: 200px;
+    font-size: 1.6rem;
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
@@ -574,6 +636,13 @@ section {
     .home-sci a {
         width: 38px;
         height: 38px;
+    }
+
+    .skills-container .card {
+        width: 210px;
+        height: 300px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
