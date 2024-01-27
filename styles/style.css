@@ -20,7 +20,7 @@
 }
 
 html {
-    font-size: 70%;
+    font-size: 60%;
     overflow-x: hidden;
 }
 
@@ -266,7 +266,7 @@ section {
 }
 
 .about {
-    min-height: 80vh;
+    min-height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,8 +356,8 @@ section {
 .skills-container .card {
     position: relative;
     text-align: center;
-    width: 320px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background: rgba(45, 45, 45, 1);
     border-radius: 20px;
     margin-left: 80px;
@@ -639,7 +639,7 @@ section {
     }
 
     .skills-container .card {
-        width: 210px;
+        width: 300px;
         height: 300px;
         margin-left: 0;
         margin-right: 0;
