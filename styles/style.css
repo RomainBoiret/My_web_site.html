@@ -120,7 +120,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/background.png') no-repeat;
+    background: url('../images/background.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -366,7 +366,7 @@ section {
 }
 
 .card .skill-img-1 {
-    background: url('/images/web-skills.jpg') no-repeat;
+    background: url('../images/web-skills.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     width: auto;
@@ -374,7 +374,7 @@ section {
 }
 
 .card .skill-img-2 {
-    background: url('/images/code-skills.gif') no-repeat;
+    background: url('../images/code-skills.gif') no-repeat;
     background-size: cover;
     background-position: center;
     width: auto;
@@ -382,7 +382,7 @@ section {
 }
 
 .card .skill-img-3 {
-    background: url('/images/office-skills.jpg') no-repeat;
+    background: url('../images/office-skills.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     width: auto;
