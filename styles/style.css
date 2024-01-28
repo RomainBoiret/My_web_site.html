@@ -14,9 +14,9 @@
 :root {
     --bg-color: #52796f;
     --bg-color_2: #365049;
+    --main-color: #354f52;
     --second-bg-color: #ffb703;
     --text-color: #fefae0;
-    --main-color: #354f52;
 }
 
 html {
@@ -116,7 +116,7 @@ section {
 }
 
 .home {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     padding: 0 9%;
@@ -256,24 +256,72 @@ section {
     width: 100%;
 }
 
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: transparent;
+.home-color {
+    margin-top: 5rem;
+    width: 30rem;
+    height: 7rem;
+    background: #e9ecef;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.home-color .color-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.home-color .color-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.home-color .color-btn:active {
+    transform: scale(0.7);
+}
+
+.home-color .bg-color {
+    background: var(--bg-color);
+}
+
+.home-color .bg-color-2 {
+    background: var(--bg-color_2);
+}
+
+.home-color .main-color {
+    background: var(--main-color);
+}
+
+.home-color .second-bg-color {
+    background: var(--second-bg-color);
+}
+
+.home-color .text-color {
+    background: var(--text-color);
 }
 
 .about {
     min-height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
     background: var(--bg-color_2);
-    padding-bottom: 6rem;
+}
+
+.about-main {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img {
+    width: 20vw;
+    border-radius: 50%;
+    border: .2rem solid var(--second-bg-color);
 }
 
 .heading {
@@ -282,38 +330,15 @@ section {
     text-align: center;
 }
 
-.about-img img {
-    width: 90%;
-    border-radius: 50%;
-    border: .2rem solid var(--second-bg-color);
-}
-
-.about-img {
-    position: relative;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-img .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid var(--main-color);
-    border-bottom: .2rem solid var(--main-color);
-    border-left: .2rem solid var(--second-bg-color);
-    border-right: .2rem solid var(--second-bg-color);
-}
-
 .about-content {
+    width: 70rem;
+    height: 40rem;
+    padding: 3rem 2rem 4rem;
     text-align: center;
+}
+
+.about-content h2 {
+    line-height: 1.2;
 }
 
 .about-content h3 {
@@ -323,6 +348,37 @@ section {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+.about .about-citations {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    z-index: 99;
+}
+
+.about-citations .citation-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 30rem;
+    gap: 2rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.citation-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
 }
 
 .btn-box.btns {
@@ -338,62 +394,57 @@ section {
     min-height: 60vh;
 }
 
-.skills-body {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .skills-container {
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.skills-container .card {
-    position: relative;
+.skills-container .skill-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 30rem;
+    gap: 2rem;
+    background: var(--bg-color_2);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
     text-align: center;
-    width: 350px;
-    height: 350px;
-    background: rgba(45, 45, 45, 1);
-    border-radius: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    overflow: hidden;
+    border: .2rem solid var(--bg-color_2);
+    transition: .5s ease;
 }
 
-.card .skill-img-1 {
-    background: url("../images/web-skills.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    height: 200px;
+.skills-container .skill-box:hover {
+    border-color: var(--second-bg-color);
+    transform: scale(1.02);
 }
 
-.card .skill-img-2 {
-    background: url("../images/code-skills.gif") no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    height: 200px;
+.skill-box .icon-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-bg-color);
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
 }
 
-.card .skill-img-3 {
-    background: url("../images/office-skills.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: auto;
-    height: 200px;
+.skill-box i {
+    font-size: 7rem;
+    color: var(--text-color);
 }
 
-.skill-description p {
-    margin-top: 10px;
-    width: auto;
-    height: 200px;
+.skill-box p {
     font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.skill-box h3 {
+    font-size: 2.6rem;
 }
 
 .contact {
@@ -615,17 +666,16 @@ section {
     .navigation a.active::after {
         background: transparent;
     }
-
-    .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
-    }
 }
 
 @media (max-width: 520px) {
     html {
         font-size: 50%;
+    }
+
+    .home {
+        min-height: 100vh;
+        background: transparent;
     }
 
     .home-content h1 {
@@ -636,6 +686,29 @@ section {
     .home-sci a {
         width: 38px;
         height: 38px;
+    }
+
+    .home-color .color-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about .about-main {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .about img {
+        top: 0;
+        width: 70vw;
+    }
+
+    .about .about-content {
+        width: auto;
+    }
+
+    .about .about-citations {
+        margin-top: 0;
     }
 
     .skills-container .card {
