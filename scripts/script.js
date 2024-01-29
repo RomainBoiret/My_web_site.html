@@ -36,3 +36,29 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100);
 }
+
+// copy color code
+function copyColorCode(element) {
+    var bgColor = window.getComputedStyle(element).getPropertyValue("background-color");
+
+    var hexColor = rgbToHex(bgColor);
+
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = hexColor;
+
+    document.body.appendChild(tempTextArea);
+
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999);
+
+    document.execCommand("copy");
+
+    document.body.removeChild(tempTextArea);
+}
+
+function rgbToHex(rgb) {
+    var hex = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    return "#" + ("0" + parseInt(hex[1], 10).toString(16)).slice(-2) +
+                 ("0" + parseInt(hex[2], 10).toString(16)).slice(-2) +
+                 ("0" + parseInt(hex[3], 10).toString(16)).slice(-2);
+}
