@@ -37,28 +37,48 @@ window.onscroll = () => {
     header.classList.toggle('sticky', window.scrollY > 100);
 }
 
-// copy color code
-function copyColorCode(element) {
-    var bgColor = window.getComputedStyle(element).getPropertyValue("background-color");
-
-    var hexColor = rgbToHex(bgColor);
-
-    var tempTextArea = document.createElement("textarea");
-    tempTextArea.value = hexColor;
-
-    document.body.appendChild(tempTextArea);
-
-    tempTextArea.select();
-    tempTextArea.setSelectionRange(0, 99999);
-
-    document.execCommand("copy");
-
-    document.body.removeChild(tempTextArea);
+// toggle theme
+let main = document.getElementById('color-btn-1');
+main.onclick = function () {
+    document.body.classList.add('main-theme');
+    document.body.classList.remove('ocean-theme');
+    document.body.classList.remove('e-theme');
+    document.body.classList.remove('white-theme');
+    document.body.classList.remove('discord-theme');
 }
 
-function rgbToHex(rgb) {
-    var hex = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    return "#" + ("0" + parseInt(hex[1], 10).toString(16)).slice(-2) +
-                 ("0" + parseInt(hex[2], 10).toString(16)).slice(-2) +
-                 ("0" + parseInt(hex[3], 10).toString(16)).slice(-2);
+let ocean = document.getElementById('color-btn-2');
+ocean.onclick = function () {
+    document.body.classList.add('ocean-theme');
+    document.body.classList.remove('main-theme');
+    document.body.classList.remove('e-theme');
+    document.body.classList.remove('white-theme');
+    document.body.classList.remove('discord-theme');
+}
+
+let e = document.getElementById('color-btn-3');
+e.onclick = function () {
+    document.body.classList.add('e-theme');
+    document.body.classList.remove('main-theme');
+    document.body.classList.remove('ocean-theme');
+    document.body.classList.remove('white-theme');
+    document.body.classList.remove('discord-theme');
+}
+
+let white = document.getElementById('color-btn-4');
+white.onclick = function () {
+    document.body.classList.add('white-theme');
+    document.body.classList.remove('main-theme');
+    document.body.classList.remove('e-theme');
+    document.body.classList.remove('ocean-theme');
+    document.body.classList.remove('discord-theme');
+}
+
+let discord = document.getElementById('color-btn-5');
+discord.onclick = function () {
+    document.body.classList.add('discord-theme');
+    document.body.classList.remove('main-theme');
+    document.body.classList.remove('e-theme');
+    document.body.classList.remove('white-theme');
+    document.body.classList.remove('ocean-theme');
 }

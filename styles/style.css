@@ -12,6 +12,7 @@
 }
 
 :root {
+    /* Set color 1 */
     --bg-color: #52796f;
     --bg-color_2: #365049;
     --main-color: #354f52;
@@ -22,6 +23,51 @@
 html {
     font-size: 60%;
     overflow-x: hidden;
+}
+
+.main-theme {
+    /* Set color 1 */
+    --bg-color: #52796f;
+    --bg-color_2: #365049;
+    --main-color: #354f52;
+    --second-bg-color: #ffb703;
+    --text-color: #fefae0;
+}
+
+.ocean-theme {
+    /* Set color 2 */
+    --bg-color: #1f487e;
+    --bg-color_2: #376996;
+    --main-color: #376996;
+    --second-bg-color: #bbd1ea;
+    --text-color: #fef9ff;
+}
+
+.e-theme {
+    /* Set color 3 */
+    --bg-color: #fcc1d0;
+    --bg-color_2:#fcb2c5;
+    --main-color: #fbc7ff;
+    --second-bg-color: #7e61ab;
+    --text-color: #5b209a;
+}
+
+.white-theme {
+    /* Set color 4 */
+    --bg-color: #f8f9fa;
+    --bg-color_2: #e9ecef;
+    --main-color: #adb5bd;
+    --second-bg-color: #495057;
+    --text-color: #212529;
+}
+
+.discord-theme {
+    /* Set color 5 */
+    --bg-color: #23272a;
+    --bg-color_2: #2c2f33;
+    --main-color: #99aab5;
+    --second-bg-color: #7289da;
+    --text-color: #ffffff;
 }
 
 body {
@@ -59,7 +105,7 @@ header {
 }
 
 .navigation a.active {
-    color: #ffb703;
+    color: var(--second-bg-color);
 }
 
 .navigation a.to-up {
@@ -87,7 +133,7 @@ header {
     bottom: -6px;
     width: 100%;
     height: 2px;
-    background: #ffb703;
+    background: var(--second-bg-color);
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
@@ -269,51 +315,89 @@ section {
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
-.home-color .color-btn {
-    width: 50px;
-    height: 50px;
+.home-color #color-btn-1 {
+    width: 40px;
+    height: 40px;
+    background: #52796f;
     border-radius: 5px;
     transition: .2s;
 }
 
-.home-color .color-btn:hover {
+.home-color #color-btn-1:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.home-color .color-btn:active {
+.home-color #color-btn-1:active {
     transform: scale(0.7);
 }
 
-.home-color .color-btn:active::after {
-    content: 'Copied';
-    position: absolute;
-    top: -50px;
-    right: 0px;
-    background: #e9ecef;
-    padding: 8px 10px;
-    border-radius: 20px;
-    font-size: 15px;
+.home-color #color-btn-2 {
+    width: 40px;
+    height: 40px;
+    background: #1f487e;
+    border-radius: 5px;
+    transition: .2s;
 }
 
-.home-color .bg-color {
-    background: var(--bg-color);
+.home-color #color-btn-2:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-.home-color .bg-color-2 {
-    background: var(--bg-color_2);
+.home-color #color-btn-2:active {
+    transform: scale(0.7);
 }
 
-.home-color .main-color {
-    background: var(--main-color);
+.home-color #color-btn-3 {
+    width: 40px;
+    height: 40px;
+    background: #fcc1d0;
+    border-radius: 5px;
+    transition: .2s;
 }
 
-.home-color .second-bg-color {
-    background: var(--second-bg-color);
+.home-color #color-btn-3:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
-.home-color .text-color {
-    background: var(--text-color);
+.home-color #color-btn-3:active {
+    transform: scale(0.7);
+}
+
+.home-color #color-btn-4 {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.home-color #color-btn-4:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.home-color #color-btn-4:active {
+    transform: scale(0.7);
+}
+
+.home-color #color-btn-5 {
+    width: 40px;
+    height: 40px;
+    background: #23272a;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.home-color #color-btn-5:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.home-color #color-btn-5:active {
+    transform: scale(0.7);
 }
 
 .about {
@@ -648,9 +732,32 @@ section {
 }
 
 /* BREAKPOINTS */
+@media (max-width: 1800px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home {
+        min-height: 90vh;
+    }
+
+    .home-sci {
+        margin-top: 5rem;
+    }   
+    
+    .home-color .color-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 62.5%;
+    }
+
+    section {
+        padding: 5rem 2% 1rem;
     }
 }
 
@@ -758,11 +865,6 @@ section {
     .home-sci a {
         width: 38px;
         height: 38px;
-    }
-
-    .home-color .color-btn {
-        width: 40px;
-        height: 40px;
     }
 
     .about .about-main {
