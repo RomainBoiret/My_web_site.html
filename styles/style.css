@@ -774,10 +774,6 @@ section {
         font-size: 62.5%;
     }
 
-    header {
-        transition: 0s;
-    }
-
     section {
         padding: 5rem 2% 1rem;
     }
@@ -876,7 +872,6 @@ section {
 
     .home {
         min-height: 100vh;
-        background: transparent;
     }
 
     .home-content h1 {
