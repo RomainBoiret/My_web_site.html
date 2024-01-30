@@ -43,13 +43,13 @@ html {
     --text-color: #fef9ff;
 }
 
-.e-theme {
+.savane-theme {
     /* Set color 3 */
-    --bg-color: #fcc1d0;
-    --bg-color_2:#fcb2c5;
-    --main-color: #fbc7ff;
-    --second-bg-color: #7e61ab;
-    --text-color: #5b209a;
+    --bg-color: #fb8b24;
+    --bg-color_2:#e36414;
+    --main-color: #d62828;
+    --second-bg-color: #fcbf49;
+    --text-color: #eae2b7;
 }
 
 .white-theme {
@@ -165,11 +165,10 @@ section {
 .home {
     min-height: 80vh;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 9%;
-    background: url("../images/background.png") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: transparent;
 }
 
 .home-content {
@@ -310,7 +309,7 @@ section {
     background: #e9ecef;
     border-radius: 5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
@@ -353,7 +352,7 @@ section {
 .home-color #color-btn-3 {
     width: 40px;
     height: 40px;
-    background: #fcc1d0;
+    background: #fb8b24;
     border-radius: 5px;
     transition: .2s;
 }
@@ -399,6 +398,24 @@ section {
 
 .home-color #color-btn-5:active {
     transform: scale(0.7);
+}
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 550px;
+    background: url("../images/portrait_vert-clair.png") no-repeat;
+    background-size: 425px;
+    background-position: center;
+    transition: 2s;
+}
+
+.home-img:hover {
+    background: url("../images/portrait_vert-fonce.png") no-repeat;
+    background-size: 425px;
+    background-position: center;
 }
 
 .about {
@@ -757,6 +774,10 @@ section {
         font-size: 62.5%;
     }
 
+    header {
+        transition: 0s;
+    }
+
     section {
         padding: 5rem 2% 1rem;
     }
@@ -866,6 +887,11 @@ section {
     .home-sci a {
         width: 38px;
         height: 38px;
+    }
+
+    .home-img {
+        width: 0;
+        height: 0;
     }
 
     .about .about-main {
