@@ -316,8 +316,8 @@ section {
 }
 
 .home-color #color-btn-1 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #52796f;
     border-radius: 5px;
     transition: .2s;
@@ -333,8 +333,8 @@ section {
 }
 
 .home-color #color-btn-2 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #1f487e;
     border-radius: 5px;
     transition: .2s;
@@ -350,8 +350,8 @@ section {
 }
 
 .home-color #color-btn-3 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #fb8b24;
     border-radius: 5px;
     transition: .2s;
@@ -367,8 +367,8 @@ section {
 }
 
 .home-color #color-btn-4 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #f8f9fa;
     border-radius: 5px;
     transition: .2s;
@@ -384,8 +384,8 @@ section {
 }
 
 .home-color #color-btn-5 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #23272a;
     border-radius: 5px;
     transition: .2s;
@@ -404,17 +404,17 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 550px;
-    height: 550px;
+    width: 700px;
+    height: 700px;
     background: url("../images/portrait_vert-clair.png") no-repeat;
-    background-size: 425px;
+    background-size: 525px;
     background-position: center;
     transition: 2s;
 }
 
 .home-img:hover {
     background: url("../images/portrait_vert-fonce.png") no-repeat;
-    background-size: 425px;
+    background-size: 525px;
     background-position: center;
 }
 
@@ -621,6 +621,132 @@ section {
     display: none;
 }
 
+.projects {
+    min-height: auto;
+}
+
+.project-container {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-container .project-box {
+    width: 100%;
+    height: 60em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem 4rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    border: .2rem solid var(--bg-color);
+}
+
+.project-box .project-resume {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem 4rem;
+}
+
+.project-resume h3 {
+    font-size: 3.3rem;
+}
+
+.project-resume p {
+    width: 80%;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    margin: 1rem 0 3rem;
+}
+
+.project-resume .project-link {
+    position: absolute;
+    bottom: 0;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-link .project-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    border-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color_2);
+    transition: .3s;
+}
+
+.project-link i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    border-radius: 25px;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color_2);
+    transition: .8s;
+}
+
+.project-link .project-btn:hover {
+    transform: scale(1.1);
+}
+
+.project-link i:hover {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    transform: scale(1.1) rotate(-360deg);
+}
+
+.project-box .project-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem 4rem;
+    background: var(--bg-color_2);
+    border-radius: 10px;
+}
+
+.project-view .project-img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-view .project-tools {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 20px;
+    bottom: 50px;
+    width: 17rem;
+    height: 5rem;
+    font-size: 5rem;
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
@@ -761,11 +887,41 @@ section {
 
     .home-sci {
         margin-top: 5rem;
-    }   
+    } 
+
+    .home-color #color-btn-1 {
+        width: 45px;
+        height: 45px;
+    }
     
-    .home-color .color-btn {
-        width: 40px;
-        height: 40px;
+    .home-color #color-btn-2 {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .home-color #color-btn-3 {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .home-color #color-btn-4 {
+        width: 45px;
+        height: 45px;
+    } 
+    
+    .home-color #color-btn-5 {
+        width: 45px;
+        height: 45px;
+    }
+
+    .home-img {
+        width: 550px;
+        height: 550px;
+        background-size: 425px;
+    }
+    
+    .home-img:hover {
+        background-size: 425px;
     }
 }
 
@@ -790,6 +946,41 @@ section {
 
     .home {
         padding: 0 4%;
+    }
+
+    .project-container .project-box {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 0;
+    }
+
+    .project-box {
+        height: 220px;
+    }
+
+    .project-box .project-resume {
+        height: 400px;
+    }
+
+    .project-box .project-view {
+        height: 220px;
+        padding: 1rem;
+    }
+
+    .project-box .project-img {
+        height: 150px;
+    }
+
+    .project-view .project-tools {
+        width: 13rem;
+        right: 5px;
+        bottom: 2px;
+        font-size: 3.6rem;
+    }
+
+    .project-resume .project-link {
+        width: 175px;
+        bottom: 20px;
     }
 
     .footer {
@@ -935,6 +1126,27 @@ section {
 
     .home-content h1 {
         font-size: 5rem;
+    }
+
+    .project-temple {
+        width: 500px;
+        height: 700px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .project-resume {
+        width: 0;
+        height: 0;
+        flex-direction: column-reverse;
+    }
+
+    .project-view {
+        width: 450px;
+        height: 200px;
+        background: transparent;
+        margin-top: 0;
     }
 
     .contact form .input-box .input-field {
