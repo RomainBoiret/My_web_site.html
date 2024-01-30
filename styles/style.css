@@ -168,7 +168,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0 9%;
-    background: transparent;
+    background: var(--bg-color);
 }
 
 .home-content {
