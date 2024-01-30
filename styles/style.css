@@ -621,6 +621,135 @@ section {
     display: none;
 }
 
+.projects {
+    min-height: auto;
+}
+
+.project-container {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-container .project-box {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem 4rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    border: .2rem solid var(--bg-color);
+}
+
+.project-box .project-resume {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem 4rem;
+}
+
+.project-resume h3 {
+    font-size: 3.3rem;
+}
+
+.project-resume p {
+    width: 80%;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    margin: 1rem 0 3rem;
+}
+
+.project-resume .project-link {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-link .project-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    border-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color_2);
+    transition: .3s;
+}
+
+.project-link i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    border-radius: 25px;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color_2);
+    transition: .8s;
+}
+
+.project-link .project-btn:hover {
+    transform: scale(1.1);
+}
+
+.project-link i:hover {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    transform: scale(1.1) rotate(-360deg);
+}
+
+.project-box .project-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem 4rem;
+    background: var(--bg-color_2);
+    border-radius: 10px;
+}
+
+.project-view .github-stats-view {
+    width: 100%;
+    height: 500px;
+}
+
+.project-view .project-img {
+    width: 100%;
+    height: 50%;
+    background: url("../images/github-stats.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.project-view .project-tools {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 20px;
+    bottom: 50px;
+    width: 17rem;
+    height: 5rem;
+    font-size: 5rem;
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
@@ -792,6 +921,24 @@ section {
         padding: 0 4%;
     }
 
+    .project-container .project-box {
+        flex-direction: column-reverse;
+        height: 300em;
+        padding: 0;
+    }
+
+    .project-box {
+        height: 200px;
+    }
+
+    .project-view .project-tools {
+        position: static;
+    }
+
+    .project-resume .project-link {
+        position: static;
+    }
+
     .footer {
         padding: 2rem 4%;
     }
@@ -935,6 +1082,27 @@ section {
 
     .home-content h1 {
         font-size: 5rem;
+    }
+
+    .project-temple {
+        width: 500px;
+        height: 700px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .project-resume {
+        width: 0;
+        height: 0;
+        flex-direction: column-reverse;
+    }
+
+    .project-view {
+        width: 450px;
+        height: 200px;
+        background: transparent;
+        margin-top: 0;
     }
 
     .contact form .input-box .input-field {
