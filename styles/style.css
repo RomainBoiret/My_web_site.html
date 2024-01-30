@@ -316,8 +316,8 @@ section {
 }
 
 .home-color #color-btn-1 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #52796f;
     border-radius: 5px;
     transition: .2s;
@@ -333,8 +333,8 @@ section {
 }
 
 .home-color #color-btn-2 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #1f487e;
     border-radius: 5px;
     transition: .2s;
@@ -350,8 +350,8 @@ section {
 }
 
 .home-color #color-btn-3 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #fb8b24;
     border-radius: 5px;
     transition: .2s;
@@ -367,8 +367,8 @@ section {
 }
 
 .home-color #color-btn-4 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #f8f9fa;
     border-radius: 5px;
     transition: .2s;
@@ -384,8 +384,8 @@ section {
 }
 
 .home-color #color-btn-5 {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #23272a;
     border-radius: 5px;
     transition: .2s;
@@ -404,17 +404,17 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 550px;
-    height: 550px;
+    width: 700px;
+    height: 700px;
     background: url("../images/portrait_vert-clair.png") no-repeat;
-    background-size: 425px;
+    background-size: 525px;
     background-position: center;
     transition: 2s;
 }
 
 .home-img:hover {
     background: url("../images/portrait_vert-fonce.png") no-repeat;
-    background-size: 425px;
+    background-size: 525px;
     background-position: center;
 }
 
@@ -635,7 +635,7 @@ section {
 
 .project-container .project-box {
     width: 100%;
-    height: 450px;
+    height: 60em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -666,9 +666,8 @@ section {
 
 .project-resume .project-link {
     position: absolute;
-    display: flex;
     bottom: 0;
-    width: 175px;
+    width: 210px;
     display: flex;
     justify-content: space-between;
 }
@@ -724,18 +723,16 @@ section {
     border-radius: 10px;
 }
 
-.project-view .github-stats-view {
-    width: 100%;
-    height: 500px;
-}
-
 .project-view .project-img {
     width: 100%;
-    height: 50%;
-    background: url("../images/github-stats.png") no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 350px;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
 }
 
 .project-view .project-tools {
@@ -890,11 +887,41 @@ section {
 
     .home-sci {
         margin-top: 5rem;
-    }   
+    } 
+
+    .home-color #color-btn-1 {
+        width: 45px;
+        height: 45px;
+    }
     
-    .home-color .color-btn {
-        width: 40px;
-        height: 40px;
+    .home-color #color-btn-2 {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .home-color #color-btn-3 {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .home-color #color-btn-4 {
+        width: 45px;
+        height: 45px;
+    } 
+    
+    .home-color #color-btn-5 {
+        width: 45px;
+        height: 45px;
+    }
+
+    .home-img {
+        width: 550px;
+        height: 550px;
+        background-size: 425px;
+    }
+    
+    .home-img:hover {
+        background-size: 425px;
     }
 }
 
@@ -923,20 +950,37 @@ section {
 
     .project-container .project-box {
         flex-direction: column-reverse;
-        height: 300em;
+        height: auto;
         padding: 0;
     }
 
     .project-box {
-        height: 200px;
+        height: 220px;
+    }
+
+    .project-box .project-resume {
+        height: 400px;
+    }
+
+    .project-box .project-view {
+        height: 220px;
+        padding: 1rem;
+    }
+
+    .project-box .project-img {
+        height: 150px;
     }
 
     .project-view .project-tools {
-        position: static;
+        width: 13rem;
+        right: 5px;
+        bottom: 2px;
+        font-size: 3.6rem;
     }
 
     .project-resume .project-link {
-        position: static;
+        width: 175px;
+        bottom: 20px;
     }
 
     .footer {
