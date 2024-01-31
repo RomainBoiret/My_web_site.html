@@ -643,7 +643,7 @@ section {
 .project-resume .project-link {
     position: absolute;
     bottom: 0;
-    width: 180px;
+    width: 220px;
     display: flex;
     justify-content: space-between;
 }
@@ -851,6 +851,7 @@ section {
 }
 
 /* BREAKPOINTS */
+
 @media (max-width: 1800px) {
     html {
         font-size: 50%;
@@ -897,6 +898,10 @@ section {
     
     .home-img:hover {
         background-size: 425px;
+    }
+
+    .project-resume .project-link {
+        width: 180px;
     }
 }
 
