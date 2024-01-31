@@ -45,11 +45,11 @@ html {
 
 .savane-theme {
     /* Set color 3 */
-    --bg-color: #fb8b24;
-    --bg-color_2:#e36414;
-    --main-color: #d62828;
-    --second-bg-color: #fcbf49;
-    --text-color: #eae2b7;
+    --bg-color: #ffc2d1;
+    --bg-color_2: #ffb3c6;
+    --main-color: #ff8fab;
+    --second-bg-color: #ff0a54;
+    --text-color: #eaf2d7;
 }
 
 .white-theme {
@@ -352,7 +352,7 @@ section {
 .home-color #color-btn-3 {
     width: 50px;
     height: 50px;
-    background: #fb8b24;
+    background: #ffc2d1;
     border-radius: 5px;
     transition: .2s;
 }
@@ -420,15 +420,20 @@ section {
 
 .about {
     min-height: 60vh;
+    padding: 3rem 2rem 4rem;
     background: var(--bg-color_2);
 }
 
 .about-main {
-    margin-top: 10rem;
+    margin-top: 2rem;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.about-img {
+    margin-left: 75px;
 }
 
 .about-img img {
@@ -444,10 +449,11 @@ section {
 }
 
 .about-content {
-    width: 70rem;
-    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30rem;
+    gap: 2rem;
     padding: 3rem 2rem 4rem;
-    text-align: center;
 }
 
 .about-content h2 {
@@ -459,39 +465,8 @@ section {
 }
 
 .about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-
-.about .about-citations {
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    z-index: 99;
-}
-
-.about-citations .citation-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex: 1 1 30rem;
-    gap: 2rem;
-    background: var(--bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-}
-
-.citation-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
 }
 
 .btn-box.btns {
@@ -558,7 +533,7 @@ section {
     font-size: 2.6rem;
 }
 
-.skill-box .skills-btn {
+.skills-btn {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -575,7 +550,7 @@ section {
     transition: .5s;
 }
 
-.skill-box .skills-btn:hover {
+.skills-btn:hover {
     cursor: pointer;
     background: var(--bg-color_2);
     color: var(--second-bg-color);
@@ -623,6 +598,7 @@ section {
 
 .projects {
     min-height: auto;
+    background: var(--bg-color);
 }
 
 .project-container {
@@ -667,7 +643,7 @@ section {
 .project-resume .project-link {
     position: absolute;
     bottom: 0;
-    width: 210px;
+    width: 180px;
     display: flex;
     justify-content: space-between;
 }
@@ -679,12 +655,11 @@ section {
     width: 15rem;
     height: 5rem;
     background: var(--second-bg-color);
-    border: .2rem solid var(--second-bg-color);
     border-radius: 10px;
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: .1rem;
-    color: var(--bg-color_2);
+    color: var(--bg-color);
     transition: .3s;
 }
 
@@ -695,12 +670,11 @@ section {
     width: 5rem;
     height: 5rem;
     background: var(--second-bg-color);
-    border: .2rem solid var(--second-bg-color);
     border-radius: 25px;
     font-size: 3rem;
     font-weight: 600;
     letter-spacing: .1rem;
-    color: var(--bg-color_2);
+    color: var(--bg-color);
     transition: .8s;
 }
 
@@ -725,7 +699,7 @@ section {
 
 .project-view .project-img {
     width: 100%;
-    height: 350px;
+    height: 230px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -733,6 +707,7 @@ section {
 .project-img img {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .project-view .project-tools {
@@ -890,28 +865,28 @@ section {
     } 
 
     .home-color #color-btn-1 {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
     
     .home-color #color-btn-2 {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
     
     .home-color #color-btn-3 {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
     
     .home-color #color-btn-4 {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     } 
     
     .home-color #color-btn-5 {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 
     .home-img {
@@ -946,6 +921,24 @@ section {
 
     .home {
         padding: 0 4%;
+    }
+
+    .about .about-main {
+        margin-top: 0;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .about-img {
+        margin: 0;
+    }
+
+    .about-content h3 {
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: center;
     }
 
     .project-container .project-box {
@@ -1078,11 +1071,6 @@ section {
     .home-img {
         width: 0;
         height: 0;
-    }
-
-    .about .about-main {
-        margin-top: 0;
-        flex-direction: column;
     }
 
     .about img {
