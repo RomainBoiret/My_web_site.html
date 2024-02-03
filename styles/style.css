@@ -25,6 +25,18 @@ html {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--second-bg-color);
+}
+
 .main-theme {
     /* Set color 1 */
     --bg-color: #52796f;
@@ -822,8 +834,14 @@ section {
     resize: none;
 }
 
+.contact form .btn-box {
+    width: auto;
+}
+
 .contact form .btn-box.btns .btn {
     cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 /*Footer Design*/
