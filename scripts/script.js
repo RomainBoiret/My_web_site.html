@@ -1,7 +1,7 @@
-// define the constants
+// Define the constants
 const USERNAME = 'RomainBoiret';
 
-// toogle icon navigation
+// toggle icon navigation
 let menuIcon = document.querySelector('#menu-icon');
 let navigation = document.querySelector('.navigation');
 
@@ -59,8 +59,8 @@ ocean.onclick = function () {
     document.body.classList.remove('discord-theme');
 }
 
-let e = document.getElementById('color-btn-3');
-e.onclick = function () {
+let savane = document.getElementById('color-btn-3');
+savane.onclick = function () {
     document.body.classList.add('savane-theme');
     document.body.classList.remove('main-theme');
     document.body.classList.remove('ocean-theme');
@@ -99,11 +99,10 @@ function fetchData(url) {
     });
 }
 
-// Fonction récursive pour effectuer une recherche binaire sur les étoiles
+// Recursive function to perform binary search on stars
 function binarySearchStars(startPage, endPage) {
     if (startPage > endPage) {
-        // La recherche binaire est terminée
-        return endPage;
+        return endPage; // Binary search is complete
     }
 
     console.log(startPage, endPage);
@@ -113,10 +112,10 @@ function binarySearchStars(startPage, endPage) {
 
     return fetchData(url).then(data => {
         if (data.length === 0) {
-            // Aucune étoile sur la page actuelle, recherchez à gauche
+            // No stars on the current page, search to the left
             return binarySearchStars(startPage, midPage - 1);
         } else {
-            // Au moins une étoile sur la page actuelle, recherchez à droite
+            // A star on the current page, search to the right
             return binarySearchStars(midPage + 1, endPage);
         }
     });
@@ -140,8 +139,7 @@ function fetchGithubProfile() {
 
     // Number of stars (last because send several requests)
     binarySearchStars(1, 1_000).then(lastPage => {
-        // Affichez le nombre d'étoiles sur votre page
-        document.getElementById('github-stars').innerText = lastPage; // GitHub limite à 30 étoiles par page
+        document.getElementById('github-stars').innerText = lastPage;
     });
 }
 
