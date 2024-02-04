@@ -1,3 +1,6 @@
+// define the constants
+const USERNAME = 'RomainBoiret';
+
 // toogle icon navigation
 let menuIcon = document.querySelector('#menu-icon');
 let navigation = document.querySelector('.navigation');
@@ -22,7 +25,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight - 100;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             // active navigation links
             navLinks.forEach(links => {
                 links.classList.remove('active');
@@ -82,3 +85,65 @@ discord.onclick = function () {
     document.body.classList.remove('white-theme');
     document.body.classList.remove('ocean-theme');
 }
+
+// fetch github data
+function fetchData(url) {
+    return fetch(url).then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return response.json();
+    }).catch(error => {
+        console.error('Fetch error:', error);
+    });
+}
+
+// Fonction récursive pour effectuer une recherche binaire sur les étoiles
+function binarySearchStars(startPage, endPage) {
+    if (startPage > endPage) {
+        // La recherche binaire est terminée
+        return endPage;
+    }
+
+    console.log(startPage, endPage);
+
+    const midPage = Math.floor((startPage + endPage) / 2);
+    const url = `https://api.github.com/users/${USERNAME}/starred?per_page=1&page=${midPage}`;
+
+    return fetchData(url).then(data => {
+        if (data.length === 0) {
+            // Aucune étoile sur la page actuelle, recherchez à gauche
+            return binarySearchStars(startPage, midPage - 1);
+        } else {
+            // Au moins une étoile sur la page actuelle, recherchez à droite
+            return binarySearchStars(midPage + 1, endPage);
+        }
+    });
+}
+
+function fetchGithubProfile() {
+    // Number of public repositories
+    fetchData(`https://api.github.com/users/${USERNAME}`).then(data => {
+        document.getElementById('github-repos').innerText = (data) ? data.public_repos : 'unknown';
+    });
+
+    // Number of contributions
+    fetchData(`https://github-contributions-api.deno.dev/${USERNAME}.json`).then(data => {
+        document.getElementById('github-contributions').innerText = (data) ? data.totalContributions : 'unknown';
+    })
+
+    // Number of pull requests
+    fetchData(`https://api.github.com/search/issues?q=+type:pr+user:${USERNAME}&sort=created&order=asc`).then(data => {
+        document.getElementById('github-prs').innerText = (data) ? data.total_count : 'unknown';
+    })
+
+    // Number of stars (last because send several requests)
+    binarySearchStars(1, 1_000).then(lastPage => {
+        // Affichez le nombre d'étoiles sur votre page
+        document.getElementById('github-stars').innerText = lastPage; // GitHub limite à 30 étoiles par page
+    });
+}
+
+// Wait for the DOM to be loaded before loading the profile
+window.addEventListener("DOMContentLoaded", fetchGithubProfile);
