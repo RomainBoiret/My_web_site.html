@@ -728,8 +728,8 @@ section {
 }
 
 .project-img table td {
-    width: 80px;
-    height: 80px;
+    width: 50%;
+    height: 50%;
     text-align: center;
     font-size: 2rem;
     border: 2px solid var(--bg-color);
