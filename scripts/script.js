@@ -105,8 +105,6 @@ function binarySearchStars(startPage, endPage) {
         return endPage; // Binary search is complete
     }
 
-    console.log(startPage, endPage);
-
     const midPage = Math.floor((startPage + endPage) / 2);
     const url = `https://api.github.com/users/${USERNAME}/starred?per_page=1&page=${midPage}`;
 
