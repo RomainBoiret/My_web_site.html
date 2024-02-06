@@ -646,15 +646,36 @@ section {
     padding: 3rem 2rem 4rem;
 }
 
+.project-container .project-box-2 {
+    width: 100%;
+    height: 60em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem 4rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    border: .2rem solid var(--bg-color);
+}
+
+.project-box-2 .project-resume {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem 4rem;
+}
+
 .project-resume h3 {
     font-size: 3.3rem;
 }
 
 .project-resume p {
-    width: 80%;
+    width: 100%;
     font-size: 1.8rem;
     line-height: 3.5rem;
     margin: 1rem 0 3rem;
+    text-align: justify;
 }
 
 .project-link {
@@ -665,7 +686,16 @@ section {
     justify-content: space-between;
 }
 
-.project-link .project-btn {
+.project-link-2 {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -705,7 +735,41 @@ section {
     transform: scale(1.1) rotate(-360deg);
 }
 
+.project-link-2 i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border-radius: 25px;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    transition: .8s;
+}
+
+.project-link-2 .project-btn:hover {
+    transform: scale(1.1);
+}
+
+.project-link-2 i:hover {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    transform: scale(1.1) rotate(-360deg);
+}
+
 .project-box .project-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem 3rem;
+    background: var(--bg-color_2);
+    border-radius: 10px;
+}
+
+.project-box-2 .project-view {
     position: relative;
     width: 100%;
     height: 100%;
@@ -716,18 +780,33 @@ section {
 
 .project-view .project-img {
     width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-view .project-img-1 {
+    width: 100%;
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.project-img table {
+.project-img-1 table {
     width: 100%;
     height: 100%;
     border-spacing: 10px;
 }
 
-.project-img table td {
+.project-img-1 table td {
     width: 50%;
     height: 50%;
     text-align: center;
@@ -738,23 +817,18 @@ section {
     transition: .5s ease;
 }
 
-.project-img table td:hover {
+.project-img-1 table td:hover {
     border-color: var(--second-bg-color);
 }
 
-.project-img table td i {
+.project-img-1 table td i {
     font-size: 6rem;
-}
-
-.project-img img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }
 
 .project-view .project-tools {
     position: absolute;
     display: flex;
+    left: 20px;
     justify-content: space-between;
     align-items: center;
     right: 20px;
@@ -951,6 +1025,10 @@ section {
     .project-resume .project-link {
         width: 180px;
     }
+
+    .project-resume .project-link-2 {
+        width: 180px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1000,10 +1078,6 @@ section {
         padding: 0;
     }
 
-    .project-box {
-        height: 220px;
-    }
-
     .project-box .project-resume {
         height: 400px;
     }
@@ -1017,6 +1091,25 @@ section {
         height: 100%;
     }
 
+    .project-container .project-box-2 {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+    }
+
+    .project-box-2 .project-resume {
+        height: 400px;
+    }
+
+    .project-box-2 .project-view {
+        height: 220px;
+        padding: 1rem;
+    }
+
+    .project-box-2 .project-img {
+        height: 100%;
+    }
+
     .project-img table td {
         font-size: 1.8rem;
     }
@@ -1026,16 +1119,26 @@ section {
     }
 
     .project-view .project-tools {
-        width: 13rem;
-        right: 5px;
-        bottom: 2px;
-        font-size: 3.6rem;
+        width: 0;
+        height: 0;
+    }
+
+    .project-tools i {
+        font-size: 0;
     }
 
     .project-resume .project-link {
         position: static;
         width: 175px;
         bottom: 20px;
+    }
+
+    .project-link-2 {
+        right: 0;
+        position: static;
+        width: 175px;
+        bottom: 20px;
+        flex-direction: row-reverse;
     }
 
     .footer {
