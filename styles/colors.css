@@ -1,0 +1,53 @@
+/* Set color 1 */
+:root {
+    --bg-color: #52796f;
+    --bg-color_2: #365049;
+    --main-color: #354f52;
+    --second-bg-color: #ffb703;
+    --text-color: #fefae0;
+}
+
+/* Set color 1 */
+.main-theme {
+    --bg-color: #52796f;
+    --bg-color_2: #365049;
+    --main-color: #354f52;
+    --second-bg-color: #ffb703;
+    --text-color: #fefae0;
+}
+
+/* Set color 2 */
+.ocean-theme {
+    --bg-color: #1f487e;
+    --bg-color_2: #376996;
+    --main-color: #376996;
+    --second-bg-color: #bbd1ea;
+    --text-color: #fef9ff;
+}
+
+/* Set color 3 */
+.savane-theme {
+    --bg-color: #7f5539;
+    --bg-color_2: #b08968;
+    --main-color: #6c584c;
+    --second-bg-color: #adc178;
+    --text-color: #f2f4f3;
+}
+
+/* Set color 4 */
+.white-theme {
+    --bg-color: #f8f9fa;
+    --bg-color_2: #e9ecef;
+    --main-color: #adb5bd;
+    --second-bg-color: #495057;
+    --text-color: #212529;
+}
+
+/* Set color 5 */
+.discord-theme {
+    --bg-color: #23272a;
+    --bg-color_2: #2c2f33;
+    --main-color: #99aab5;
+    --second-bg-color: #7289da;
+    --text-color: #ffffff;
+}
