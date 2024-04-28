@@ -182,6 +182,7 @@ section {
     font-weight: 600;
     letter-spacing: .1rem;
     color: var(--bg-color);
+    cursor: pointer;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
@@ -742,72 +743,65 @@ section {
 }
 
 .contact form .input-box {
-    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.contact form .input-box .input-field {
-    position: relative;
+.input-box .input-field {
     width: 49%;
     margin: .8rem 0;
 }
 
-.contact form .input-box .input-field input,
-.contact form .textarea-field textarea {
+.field .item {
     width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
+    padding: 18px;
     background: transparent;
-    border-radius: .6rem;
-    border: .2rem solid var(--second-bg-color);
+    border: 2px solid var(--second-bg-color);
+    outline: none;
+    border-radius: 6px;
+    color: var(--text-color);
+    margin: 6px 0;
 }
 
-.contact form .input-box .input-field input::placeholder,
-.contact form .textarea-field textarea::placeholder {
-    color: var(--second-bg-color);
+.field.error .item {
+    border-color: #d93025;
 }
 
-.contact form .focus {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg-color_2);
-    border-radius: .6rem;
-    z-index: -1;
-    transition: .5s;
+.field .item::placeholder {
+    color: var(--main-color);
 }
 
-.contact form .input-box .input-field input:focus~.focus,
-.contact form .input-box .input-field input:valid~.focus,
-.contact form .textarea-field textarea:focus~.focus,
-.contact form .textarea-field textarea:valid~.focus {
-    width: 100%;
+.field .error-txt {
+    font-size: 14.5px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
 }
 
-.contact form .textarea-field {
-    position: relative;
-    margin: .8rem 0 2.7rem;
-    display: flex;
+.field.error .error-txt {
+    display: block;
 }
 
-.contact form .textarea-field textarea {
+.contact form .textarea-field .item {
     resize: none;
+}
+
+.contact form .textarea-field .error-txt {
+    margin-top: -10px;
 }
 
 .contact form .btn-box {
     width: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }
 
-.contact form .btn-box.btns .btn {
-    cursor: pointer;
-    margin-left: 2rem;
-    margin-right: 2rem;
+.my-swal-container {
+    zoom: 1.8;
 }
 
 /*Footer Design*/
