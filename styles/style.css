@@ -769,7 +769,7 @@ section {
 }
 
 .field .item::placeholder {
-    color: var(--main-color);
+    color: var(--second-bg-color);
 }
 
 .field .error-txt {
