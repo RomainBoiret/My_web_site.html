@@ -13,27 +13,8 @@
         margin-top: 5rem;
     } 
 
-    .home-color #color-btn-1 {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .home-color #color-btn-2 {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .home-color #color-btn-3 {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .home-color #color-btn-4 {
-        width: 40px;
-        height: 40px;
-    } 
-    
-    .home-color #color-btn-5 {
+    #color-btn-1, #color-btn-2, #color-btn-3, 
+    #color-btn-4, #color-btn-5 {
         width: 40px;
         height: 40px;
     }

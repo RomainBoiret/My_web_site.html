@@ -279,88 +279,42 @@ section {
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
-.home-color #color-btn-1 {
+#color-btn-1, #color-btn-2, #color-btn-3,
+#color-btn-4, #color-btn-5 {
     width: 50px;
     height: 50px;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+#color-btn-1 {
     background: #52796f;
-    border-radius: 5px;
-    transition: .2s;
 }
 
-.home-color #color-btn-1:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.home-color #color-btn-1:active {
-    transform: scale(0.7);
-}
-
-.home-color #color-btn-2 {
-    width: 50px;
-    height: 50px;
+#color-btn-2 {
     background: #1f487e;
-    border-radius: 5px;
-    transition: .2s;
 }
 
-.home-color #color-btn-2:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.home-color #color-btn-2:active {
-    transform: scale(0.7);
-}
-
-.home-color #color-btn-3 {
-    width: 50px;
-    height: 50px;
+#color-btn-3 {
     background: #7f5539;
-    border-radius: 5px;
-    transition: .2s;
 }
 
-.home-color #color-btn-3:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.home-color #color-btn-3:active {
-    transform: scale(0.7);
-}
-
-.home-color #color-btn-4 {
-    width: 50px;
-    height: 50px;
+#color-btn-4 {
     background: #f8f9fa;
-    border-radius: 5px;
-    transition: .2s;
 }
 
-.home-color #color-btn-4:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.home-color #color-btn-4:active {
-    transform: scale(0.7);
-}
-
-.home-color #color-btn-5 {
-    width: 50px;
-    height: 50px;
+#color-btn-5 {
     background: #23272a;
-    border-radius: 5px;
-    transition: .2s;
 }
 
-.home-color #color-btn-5:hover {
+#color-btn-1:hover, #color-btn-2:hover, #color-btn-3:hover,
+#color-btn-4:hover, #color-btn-5:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.home-color #color-btn-5:active {
+#color-btn-1:active, #color-btn-2:active, #color-btn-3:active, 
+#color-btn-4:active, #color-btn-5:active {
     transform: scale(0.7);
 }
 
@@ -384,7 +338,6 @@ section {
 
 .about {
     min-height: 60vh;
-    padding: 10rem 9% 2rem;
     background: var(--bg-color_2);
 }
 
@@ -394,10 +347,6 @@ section {
     align-items: center;
     justify-content: center;
     gap: 10rem;
-}
-
-.about-img {
-    margin-left: 75px;
 }
 
 .about-img img {
@@ -428,8 +377,11 @@ section {
     font-size: 2.6rem;
 }
 
-.about-content p {
+p {
     font-size: 1.8rem;
+}
+
+.about-content p {
     line-height: 3.5rem;
 }
 
@@ -463,14 +415,10 @@ section {
     gap: 5rem;
     background: var(--bg-color_2);
     padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
+    border-radius: 10px;
     text-align: center;
     border: .2rem solid var(--bg-color_2);
     transition: .5s ease;
-}
-
-.skills-container .skill-box:hover {
-    border-color: var(--second-bg-color);
 }
 
 .skill-box .icon-skills {
@@ -489,7 +437,6 @@ section {
 }
 
 .skill-box p {
-    font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
 
@@ -497,61 +444,38 @@ section {
     font-size: 2.6rem;
 }
 
-.skills-btn {
-    position: relative;
+.btn-2 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 15rem;
     height: 5rem;
     background: var(--second-bg-color);
-    border: .2rem solid var(--second-bg-color);
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: .1rem;
-    color: var(--bg-color_2);
-    transition: .5s;
-}
-
-.skills-btn:hover {
+    color: var(--bg-color);
     cursor: pointer;
-    background: var(--bg-color_2);
-    color: var(--second-bg-color);
+    transition: .2s;
 }
 
-#ch-1 {
+.btn-2:hover {
+    transform: scale(0.95);
+}
+
+#ch-1, #ch-2, #ch-3 {
     display: none;
 }
 
-#ch-1:checked ~ .skill-content {
-    display: block;
-}
-
-#ch-1:checked ~ label {
-    display: none;
-}
-
-#ch-2 {
-    display: none;
-}
-
-#ch-2:checked ~ .skill-content {
-    display: block;
-}
-
-#ch-2:checked ~ label {
-    display: none;
-}
-
-#ch-3 {
-    display: none;
-}
-
+#ch-1:checked ~ .skill-content,
+#ch-2:checked ~ .skill-content,
 #ch-3:checked ~ .skill-content {
     display: block;
 }
 
+#ch-1:checked ~ label,
+#ch-2:checked ~ label,
 #ch-3:checked ~ label {
     display: none;
 }
@@ -604,7 +528,6 @@ section {
 
 .project-resume p {
     width: 100%;
-    font-size: 1.8rem;
     line-height: 3.5rem;
     margin: 1rem 0 3rem;
     text-align: justify;
@@ -622,21 +545,6 @@ section {
     right: 18px;
 }
 
-.project-link .project-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 5rem;
-    background: var(--second-bg-color);
-    border-radius: 10px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    color: var(--bg-color);
-    transition: .3s;
-}
-
 .project-link i {
     display: inline-flex;
     justify-content: center;
@@ -650,10 +558,6 @@ section {
     letter-spacing: .1rem;
     color: var(--bg-color);
     transition: .8s;
-}
-
-.project-btn:hover {
-    transform: scale(1.1);
 }
 
 .project-link i:hover {
